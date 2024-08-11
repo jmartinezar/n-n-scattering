@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[top=2.54cm, left=2.54cm, right=2.54cm, bottom=2.54cm]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\title{Scattering n-p interaction}
+
+\begin{document}
+
+\maketitle
+
+The nucleon-nucleon potential is assume as:
+
+\begin{equation}
+    V_{ij} = (V_{R} + \frac{1}{2}(1 + P_{ij}^{\sigma})V_{t} + \frac{1}{2}(1 - P_{ij}^{\sigma})V_{s})(\frac{1}{2}u + \frac{1}{2}(2 - u)P_{ij}^{\tau}) + \frac{1}{4}(1 + \tau_{iz})(1 + \tau_{jz})\frac{e^{2}}{r_{ij}}
+\end{equation}
+
+take $u\approx 1$
+
+\begin{equation}
+    V_{ij} = \frac{1}{2}\left[V_{R} + \frac{1}{2}(1 + P_{ij}^{\sigma})V_{t} + \frac{1}{2}(1 - P_{ij}^{\sigma})V_{s}\right](1 + P_{ij}^{r}) + \frac{1}{4}(1 + \tau_{iz})(1 + \tau_{jz})\frac{e^{2}}{r_{ij}}
+\end{equation}
+
+in which the operator come defined as $P_{ij}^{\sigma} = (-1)^{s+1}$ and $P_{ij}^{r} = (-1)^{l}$. For $n-p$ interaction we have $\tau_{iz} = 1$ and $\tau_{jz} = -1$. We take account all possible cases to $s$ and $l$. In each case, the quantum number is in {0,1} set hence there are 4 possible combination:
+
+\textbf{Case I:} $l=0$ y $s=0$
+
+\begin{equation}
+    V_{ij} = \frac{1}{2}(V_{R} + \frac{1}{2}(1 + (-1))V_{t} + \frac{1}{2}(1 - (-1))V_{s})(1 + 1) + \frac{1}{4}(1 + 1)(1 + (-1))\frac{e^{2}}{r_{ij}}
+\end{equation}
+
+\begin{equation}
+    V_{ij} = V_R + V_s
+\end{equation}
+
+\textbf{Case II:} $l=0$ y $s=1$
+
+\begin{equation}
+    V_{ij} = \frac{1}{2}(V_{R} + \frac{1}{2}(1 + 1)V_{t} + \frac{1}{2}(1 - 1)V_{s})(1 + 1) + \frac{1}{4}(1 + 1)(1 + (-1))\frac{e^{2}}{r_{ij}}
+\end{equation}
+
+\begin{equation}
+    V_{ij} = V_R + V_t
+\end{equation}
+
+\textbf{Case III:} $l=1$ y $s=0$
+
+\begin{equation}
+    V_{ij} = \frac{1}{2}(V_{R} + \frac{1}{2}(1 + (-1))V_{t} + \frac{1}{2}(1 - (-1))V_{s})(1 + (-1)) + \frac{1}{4}(1 + 1)(1 + (-1))\frac{e^{2}}{r_{ij}}
+\end{equation}
+
+\begin{equation}
+    V_{ij} = 0
+\end{equation}
+
+\textbf{Case IV:} $l=0$ y $s=1$
+
+\begin{equation}
+    V_{ij} = \frac{1}{2}(V_{R} + \frac{1}{2}(1 + 1)V_{t} + \frac{1}{2}(1 - 1)V_{s})(1 + (-1)) + \frac{1}{4}(1 + 1)(1 + (-1))\frac{e^{2}}{r_{ij}}
+\end{equation}
+
+\begin{equation}
+    V_{ij} = 0
+\end{equation}
+
+In this way is possible take account only two firsts cases
+
+\begin{equation}
+    V(r) =
+    \begin{cases}
+        V_R + V_s & \text{if} \quad l=0 \quad \text{and} \quad s=0\\
+        V_R + V_t & \text{if} \quad l=0 \quad \text{and} \quad s=1\\
+        0 & \text{other case.}
+    \end{cases}
+\end{equation}
+
+with
+
+\[
+V_R = V_{0R} \exp(-\kappa_R r^2),
+\]
+\[
+V_t = -V_{0t} \exp(-\kappa_t r^2),
+\]
+\[
+V_s = -V_{0s} \exp(-\kappa_s r^2),
+\]
+\[
+\text{with}
+\]
+\[
+V_{0R} = 200.0 \text{ MeV}, \quad \kappa_{R} = 1.487 \text{ fm}^{-2},
+\]
+\[
+V_{0t} = 178.0 \text{ MeV}, \quad \kappa_{t} = 0.639 \text{ fm}^{-2},
+\]
+\[
+V_{0s} = 91.85 \text{ MeV}, \quad \kappa_{s} = 0.465 \text{ fm}^{-2}.
+\]
+
+to find $f(\theta)$ put potential in the next integral
+
+\begin{equation}
+    f(\theta) = \int_0^{\infty} r\sin{(qr)}V(r)dr
+\end{equation}
+
+for all non-vanish cases
+
+\textbf{Case I:}
+
+\begin{equation}
+    f(\theta) = \int_0^{\infty} r\sin{(qr)}(V_R(r) + V_s(r))dr
+\end{equation}
+
+\begin{equation}
+    f(\theta) = \int_0^{\infty} r\sin{(qr)}\left(V_{0R} \exp(-\kappa_R r^2) - V_{0s} \exp(-\kappa_s r^2)\right)dr
+\end{equation}
+
+\textbf{Case II:}
+
+\begin{equation}
+    f(\theta) = \int_0^{\infty} r\sin{(qr)}(V_R(r) + V_t(r))dr
+\end{equation}
+
+\begin{equation}
+    f(\theta) = \int_0^{\infty} r\sin{(qr)}\left(V_{0R} \exp(-\kappa_R r^2) - V_{0t} \exp(-\kappa_t r^2)\right)dr
+\end{equation}
+
+solving integral numericaly we get $f(\theta)$, with this
+
+\begin{equation}
+    \frac{d\sigma}{d\Omega} = |f(\theta)|^2
+\end{equation}
+
+the results are shown in Figure \ref{4}
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{4-car.pdf}
+        \caption{Plot in cartesian coordinates.}
+        \label{fig:first}
+    \end{subfigure}
+    
+    \vspace{1cm}
+    
+    \begin{subfigure}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{4-polar.pdf}
+        \caption{Plot in polar coordinates.}
+        \label{fig:second}
+    \end{subfigure}
+    
+    \caption{Plot of numerical results for differential cross-section in cartesian and polar coordinates.}
+    \label{4}
+\end{figure}
+
+
+\end{document}
